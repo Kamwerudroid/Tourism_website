@@ -40,6 +40,7 @@
         </nav>
       </div>
     </header>
+    <hr>
     <!-- form -->
      <div class="flex items-center justify-center p-12">
     <!-- Author: FormBold Team -->
@@ -52,11 +53,34 @@
                 <input type="text" name="name" id="name" placeholder="Full Name"
                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
             </div>
+            <div class="relative inline-block text-left">
+    <div class="group mb-5">
+        <button type="button"
+            class=" inline-flex justify-center items-center w-full px-4 py-2 text-sm font-medium  text-[#07074D] bg-white  focus:outline-none focus:shadow-md border rounded-md focus:border-[#6A64F1]">
+            Destination
+            <!-- Dropdown arrow -->
+            <svg class="w-4 h-4 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+            </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+            class="mb absolute left-0 w-40 mt-1 origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
+            <div class="py-1">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mount Kenya</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mombasa</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tokyo</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sendai</a>
+            </div>
+        </div>
+    </div>
+</div>
             <div class="mb-5">
                 <label for="phone" class="mb-3 block text-base font-medium text-[#07074D]">
-                    Phone Number
+                    Number of Travellers
                 </label>
-                <input type="text" name="phone" id="phone" placeholder="Enter your phone number"
+                <input type="number" name="phone" id="phone" placeholder="Number of Travellers"
                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
             </div>
             <div class="mb-5">
@@ -66,11 +90,18 @@
                 <input type="email" name="email" id="email" placeholder="Enter your email"
                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
             </div>
+            <div class="mb-5">
+                <label for="phone" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Phone Number 
+                </label>
+                <input type="number" name="phone" id="phone" placeholder="Enter phone number"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
             <div class="-mx-3 flex flex-wrap">
                 <div class="w-full px-3 sm:w-1/2">
                     <div class="mb-5">
                         <label for="date" class="mb-3 block text-base font-medium text-[#07074D]">
-                            Date
+                            Start Date
                         </label>
                         <input type="date" name="date" id="date"
                             class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
@@ -79,50 +110,59 @@
                 <div class="w-full px-3 sm:w-1/2">
                     <div class="mb-5">
                         <label for="time" class="mb-3 block text-base font-medium text-[#07074D]">
-                            Time
+                            End date
                         </label>
-                        <input type="time" name="time" id="time"
+                        <input type="date" name="date" id="date"
                             class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                     </div>
                 </div>
             </div>
+            <!-- travel type -->
+             <div class="border rounded-md p-4 w-full mx-auto max-w-2xl">
+    <h4 class=" font-semibold mb-3 block text-base font-medium text-[#07074D]">
+        Select Your Travel Type
+    </h4>
 
-            <div class="mb-5 pt-3">
-                <label class="mb-5 block text-base font-semibold text-[#07074D] sm:text-xl">
-                    Address Details
+    <div>
+        <label class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3  hover:bg-indigo-300 cursor-pointer ">
+             <input type="radio" name="budget">
+             <i class="pl-2">Budget</i>
+        </label>
+
+        <label class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3  hover:bg-indigo-300 cursor-pointer ">
+            <input type="radio" name="family">
+            <i class="pl-2">Family</i>
+        </label>
+
+        <label class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3  hover:bg-indigo-300 cursor-pointer ">
+              <input type="radio" name="adventure">
+              <i class="pl-2">Adventure</i>
+         </label>
+
+        <label class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3  hover:bg-indigo-300 cursor-pointer ">
+              <input type="radio" name="all inclusive">
+              <i class="pl-2">All Inclusive</i>
+        </label>
+
+    </div>
+</div>
+<!-- message -->
+ <div class="mb-5 mt-5">
+                <label for="input" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Additional Message
                 </label>
-                <div class="-mx-3 flex flex-wrap">
-                    <div class="w-full px-3 sm:w-1/2">
-                        <div class="mb-5">
-                            <input type="text" name="area" id="area" placeholder="Enter area"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                        </div>
-                    </div>
-                    <div class="w-full px-3 sm:w-1/2">
-                        <div class="mb-5">
-                            <input type="text" name="city" id="city" placeholder="Enter city"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                        </div>
-                    </div>
-                    <div class="w-full px-3 sm:w-1/2">
-                        <div class="mb-5">
-                            <input type="text" name="state" id="state" placeholder="Enter state"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                        </div>
-                    </div>
-                    <div class="w-full px-3 sm:w-1/2">
-                        <div class="mb-5">
-                            <input type="text" name="post-code" id="post-code" placeholder="Post Code"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                        </div>
-                    </div>
-                </div>
+                <textarea name="input" id="input" rows="5" maxlength="256" required=""
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" ></textarea>
             </div>
+            
+ 
+
+            <!--  -->
 
             <div>
                 <button
                     class="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
-                    Book Appointment
+                    Submit
                 </button>
             </div>
         </form>
